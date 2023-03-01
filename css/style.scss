@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Prata&family=Roboto:wght@300;400;500;700&display=swap');
+@import "../nullstyle";
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+
+
+.wrapper {
+  display: flex;
+  min-height: 100%;
+  overflow: hidden;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1202px;
+  padding: 0 15px;
+  margin: 0 auto;
+  @media (max-width: 1202px) {
+    .container {
+      max-width: 970px;
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      max-width: 750px;
+    }
+
+  }
+  @media (max-width: 767px) {
+    .container {
+      max-width: none;
+    }
+  }
+}
+
+.header {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 0;
+  }
+  &__company  {
+    display: flex;
+    align-items: center;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    li {
+      margin-right: 65px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__link {
+    line-height: 16px;
+    color: #555248;
+  }
+  &__buttons {
+    display: flex;
+
+    li {
+      margin-right: 23px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__button {
+    display: inline-block;
+    width: 20px;
+    height: 18px;
+  }
+}
+
+.button {
+  &_search {
+    background: url("../img/lupa.svg") center center no-repeat;
+  }
+  &_favourite {
+    position: relative;
+    background: url("../img/serdce.svg") center center no-repeat;
+    &::after {
+      content: "1";
+      position: absolute;
+      width: 13px;
+      height: 13px;
+      top: -4px;
+      right: -6px;
+      font-size: 8px;
+      line-height: 13px;
+      border-radius: 50%;
+      background-color: #E6C8B4;
+      text-align: center;
+      color: #1B1A17;
+    }
+  }
+  &_cart {
+    background: url("../img/telega.svg") center center no-repeat;
+  }
+}
+
+.collection {
+  &__body  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 88px;
+    background: url("../img/shadow.png") 60% no-repeat;
+  }
+  &__header {
+    margin-bottom: 16px;
+    position: relative;
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 45px;
+      line-height: 60px;
+      color: #1B1A17;
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 45%;
+        left: -65px;
+        width: 50px;
+        height: 1px;
+        border: 1px solid #8B8371;
+      }
+    }
+  }
+  &__subheader {
+    margin-bottom: 39px;
+  }
+  &__description {
+    margin-bottom: 64px;
+    font-weight: 300;
+    line-height: 21px;
+    color: rgba(27, 26, 23, 0.82);
+  }
+
+  &__image {
+    width: 699px;
+    height: 700px;
+    background: url('../img/watch.png') right no-repeat;
+    display: inline-flex;
+    justify-content: space-between;
+    position: relative;
+    span {
+      font-family: 'Prata', serif;
+      font-size: 16px;
+      line-height: 22px;
+      color: #1B1A17;
+    }
+  }
+  &__price {
+    padding-top: 138px;
+    padding-right: 15px;
+    background: url("../img/dollar.svg") right 143px/13px 9px no-repeat;
+    &::after {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: 147px;
+      width: 50px;
+      height: 1px;
+      margin-left: 20px;
+      background-color: #8B8371;
+    }
+  }
+  &__size {
+    align-self: end;
+    padding-bottom: 116px;
+    margin-right: -20px;
+    &::before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      top: 81.5%;
+      width: 50px;
+      right: 110px;
+      height: 1px;
+      background-color: #8B8371;
+    }
+  }
+}
+
+.link {
+  display: inline-block;
+  width: 205px;
+  height: 64px;
+  padding: 26px 38px;
+  a {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+  &_black {
+    background: #444240;
+  }
+  &_pink {
+    background: #D4B098;
+  }
+}
+
+.subheader {
+  font-family: 'Playfair Display', serif;
+  font-size: 30px;
+  line-height: 40px;
+  color: #1B1A17;
+}
+
+.models {
+  padding: 79px 0 76px 0;
+  &__subheader {
+    text-align: center;
+  }
+  &__all {
+    display: flex;
+    justify-content: end;
+  }
+  &__all__body {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 40.5px;
+    a {
+      font-size: 16px;
+      line-height: 19px;
+      color: #444240;
+    }
+    padding-bottom: 11.5px;
+  }
+  &__items  {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__item {
+    padding: 40px 28px;
+  }
+}
+
+.item {
+  &__name {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    color: rgba(27, 26, 23, 0.82);
+    margin-bottom: 10px;
+  }
+  &__price {
+    font-family: 'Prata', serif;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(27, 26, 23, 0.82);
+    margin-bottom: 2px;
+  }
+  &__image {
+    background: url("../img/ellipse.png") center no-repeat;
+    margin-bottom: 19px;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+    a {
+      font-family: 'Playfair Display', serif;
+      font-size: 16px;
+      line-height: 21px;
+      color: #1B1A17;
+      padding-left: 18px;
+    }
+  }
+}
+
+.quality {
+  background:
+          url("../img/banner1.png") center left no-repeat,
+          url("../img/ellipse_banner1.png") right bottom no-repeat,
+          url("../img/ellipse_banner2.png") right top no-repeat;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: 52px 0 21px 50px;
+  }
+  &__gallery {
+    padding-right: 35px;
+  }
+  &__image {
+    margin-bottom: 20px;
+  }
+  &__pagination {
+    padding-left: 400px;
+  }
+  &__info {
+    padding-left: 35px;
+    margin-top: 88px;
+  }
+  &__subheader {
+    margin-bottom: 38px;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 150%;
+    color: #444240;
+    margin-bottom: 45px;
+  }
+}
+
+.touch {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    padding: 81px 0 90px 0;
+  }
+  &__info {
+    padding: 140px 0 62px 0;
+  }
+  &__subheader {
+    margin-bottom: 40px;
+  }
+  &__description {
+    font-size: 16px;
+    line-height: 27px;
+    color: #444240;
+    margin-bottom: 118px;
+  }
+  &__list {
+    margin-bottom: 62px;
+  }
+  &__links {
+    display: flex;
+    li {
+      margin-right: 10px;
+      a {
+        display: inline-block;
+        width: 23px;
+        height: 23px;
+      }
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  &__link_twitter {
+    background: url("../img/twitter_icon.svg") center center no-repeat;
+  }
+  &__link_instagram {
+    background: url("../img/instagram_icon.svg") center center no-repeat;
+  }
+  &__link_facebook {
+    background: url("../img/facebook_icon.svg") center center no-repeat;
+  }
+  &__gallery {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 240px 370px;
+    grid-template-rows: 228px 222px;
+  }
+  &__image_big {
+    grid-row: span 2;
+  }
+}
+
+.name {
+  font-family: "Playfair Display", serif;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.14em;
+  color: #555248;
+  padding-left: 5px;
+  &_black {
+    color: #555248;
+  }
+  &_white {
+    color: white;
+  }
+}
+
+footer {
+  background: #444240;
+  padding: 67px 0 52px 90px;
+}
+
+.footer {
+  &__body {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+  &__header {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+}
+
+.column {
+  ul {
+    margin-top: 32px;
+  }
+  li {
+    font-size: 12px;
+    line-height: 14px;
+    color: rgba(255, 255, 255, 0.75);
+    margin-bottom: 15px;
+  }
+  li a {
+    color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+
+
